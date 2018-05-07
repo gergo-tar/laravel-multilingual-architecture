@@ -57,7 +57,7 @@ The **Controllers** can be found in the app/Http/Controllers/ folder. <br />
 The **Views** can be found in the resources/views/ folder.
 
 
-* **Routing**
+* **Routing** <br />
 The Public Web Routes are defined in the routes/web/web.php file. <br />
 The Authorized Web Routes are defined in the routes/web/admin.php file. <br />
 See available routes:
@@ -67,12 +67,12 @@ php artisan route:list
 ```
 
 
-* **Localization**
+* **Localization** <br />
 The default locales are 'hu' and 'en'. <br />
 To enable other locales change the supportedLocales key in the config file laravellocalization.php
 
 
-* **Compiling Assets**
+* **Compiling Assets** <br />
 Webpack is used.
 
 See: <br />
@@ -91,7 +91,7 @@ npm run production
 ```
 
 
-* **Admin Page**
+* **Admin Page** <br />
 To see the Admin Page use route: /login <br />
 And the dummy user credentials (after db:seed): <br />
 user: admin@test.com <br />
