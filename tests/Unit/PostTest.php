@@ -4,8 +4,9 @@ namespace Tests\Unit;
 
 use App\Models\Post;
 use App\Models\User;
-use Tests\TestCase;
+use File;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class PostTest extends TestCase
 {
@@ -52,6 +53,9 @@ class PostTest extends TestCase
 	    	->where('id', $post->id)
 	    	->first()
 	    	->getTranslation($locale, true);
+
+        // delete generated thumbnail
+        File::delete(public_path('uploads/posts/' . $post->post_thumbnail));
 
 	    // test if Post's title has been updated
      	$this->assertNotEquals($post->title, $post_modified->title);

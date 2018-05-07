@@ -12,7 +12,7 @@ return [
         'page_title' => 'Bejegyzések',
     ],
     'landing' => [
-        'page_title' => 'Welcome',
+        'page_title' => 'Hello',
         'page_sub_title' => '',
         'content' => ''.
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<br/>'.

@@ -61,7 +61,10 @@ class PostPageController extends Controller
         // call Post Service to get the PostTranslation by 'slug'
         $post        = $this->postService->getPostTranslationBySlug($slug, App::getLocale());
         $translation = $post['translation'];
-        $translation->seoable();
+
+        if($translation->SeoData->meta){
+            $translation->seoable();
+        }
 
         return view('public.posts.show', [
             'image'       => $post['post']->post_thumbnail,

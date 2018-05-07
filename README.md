@@ -1,6 +1,6 @@
 # Laravel Multilingual Architecture
 
-A Multilingual Architecture with Laravel 5.6 PHP Framework. The Demo contains a simple multilingual bloging system with SEO metadata generation.
+A Multilingual Architecture with Laravel 5.6 PHP Framework. The Demo contains a simple multilingual blogging system with SEO meta-data generation.
 
 ## Getting Started
 
@@ -52,14 +52,19 @@ Defined Service Providers:
 * App\Providers\PostServiceProvider
 * App\Providers\SeoServiceProvider
 
-The **Serivce** Interfaces and their implementations can be found in the app/Services/ folder <br />
+The **Service** Interfaces and their implementations can be found in the app/Services/ folder <br />
 The **Controllers** can be found in the app/Http/Controllers/ folder. <br />
 The **Views** can be found in the resources/views/ folder.
 
 
 * **Routing**
 The Public Web Routes are defined in the routes/web/web.php file. <br />
-The Authorized Web Routes are defined in the routes/web/admin.php file.
+The Authorized Web Routes are defined in the routes/web/admin.php file. <br />
+See available routes:
+
+```
+php artisan route:list
+```
 
 
 * **Localization**
@@ -84,6 +89,13 @@ For production (Run all Mix tasks and minify output)
 ```
 npm run production
 ```
+
+
+* **Admin Page**
+To see the Admin Page use route: /login <br />
+And the dummy user credentials (after db:seed): <br />
+user: admin@test.com <br />
+password: admin
 
 ## Running the tests
 
