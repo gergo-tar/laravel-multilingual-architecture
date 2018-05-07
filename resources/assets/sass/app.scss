@@ -1,0 +1,272 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Font Awesome
+@import "~font-awesome/scss/font-awesome.scss";
+
+body {
+	font-size: 1rem;
+}
+
+/**
+ * Header
+ */
+#headerImageWrapper {
+	background-color: #fff;
+
+	img {
+		max-height: 350px;
+	}
+}
+
+/**
+ * Navbar
+ */
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+#navbarSupportedContent ul {
+	margin: 0 auto;
+
+	.nav-item {
+	    margin-left: -0.11rem;
+
+	    .nav-link,
+	    .nav-link:link,
+	    .nav-link:visited {
+			color: #333;
+			font-size: .9rem;
+			letter-spacing: .09rem;
+			text-transform: uppercase;
+			position: relative;
+			margin: 0 auto;
+			border: 0.11rem solid transparent;
+			transition: all .2s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+			&:after, &:before {
+				content: "";
+				position: absolute;
+				left: -0.11rem;
+				top: -0.11rem;
+				height: 2.7rem;
+				width: 0;
+				border: 1px solid #c75842;
+				-webkit-transition: inherit;
+				transition: inherit;
+			}
+
+			&:after {
+				left: auto;
+				right: -0.11rem;
+			}
+
+			&:hover {
+				border-color: #c75842;
+				background-color: #c75842;
+		    	color: #fff;
+				transition: border-color .2s .2s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+				&:after, &:before {
+					right: -0.11rem;
+					transition: all .2s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+				}
+
+				&:before {
+					left: -0.11rem;
+					right: auto;
+				}
+			}
+		}
+	}
+
+	.nav-item.active .nav-link {
+		border-color: #c75842;
+		background-color: #c75842;
+		color: #fff;
+	}
+}
+
+@media only screen and (max-width: 993px) {
+	#navbarSupportedContent ul .nav-item .nav-link {
+		&:link, &:visited {
+			padding-left: .5rem;
+
+			&:after, &:before {
+				border: none;
+			}
+			&:hover {
+				&:after, &:before {
+					border: 1px solid #c75842;
+				}
+			}
+		}
+	}
+}
+
+.languagepicker {
+	background-color: #FFF;
+	display: inline-block;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
+	transition: all .3s ease;
+	margin: 0 50px 10px 0;
+	vertical-align: top;
+	float: left;
+
+	&:hover {
+		height: 81px;
+	}
+
+	li {
+		display: block;
+		padding: 0px 20px;
+		line-height: 40px;
+		border-top: 1px solid #EEE;
+
+		&:hover{
+			background-color: #EEE;
+		}
+
+		&:first-child a {
+			border: none;
+			background: #FFF !important;
+		}
+
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+
+}
+
+
+
+
+
+/**
+ * Content
+ */
+.page-title {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.page-sub-title {
+	text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 3rem;
+}
+
+/**
+ * Landing
+ */
+#landingPageRightBanner {
+	text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+	#landingPageRightBanner {
+		margin-top: 2rem;
+	}
+}
+
+/**
+ * Posts
+ */
+#postsList .row > .post-card {
+	text-align: center;
+	margin-bottom: 2rem;
+	position: relative;
+
+	img {
+		opacity: 1;
+		transition: .5s ease;
+		backface-visibility: hidden;
+	}
+
+	.card-img-overlay {
+		transition: .5s ease;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 70%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+
+		.card-title {
+			background-color: #c75842;
+		    color: white;
+		    font-size: 1rem;
+		    padding: 1rem;
+		    margin-bottom: 5rem;
+		}
+	}
+	&:hover {
+		img {
+	  		opacity: 0.3;
+		}
+		.card-img-overlay {
+		  opacity: 1;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#postsList .row > .post-card .card-img-overlay {
+		width: 50%;
+	}
+}
+
+/**
+ * Post
+ */
+#postImageWrapper {
+	text-align: center;
+}
+@media only screen and (max-width: 767px) {
+	#post  {
+		#postTitle h1 {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		#postContent {
+			order: 2;
+		}
+		#postImageWrapper {
+			order: 1;
+		}
+	}
+}
+
+/**
+ * Contact
+ */
+@media only screen and (max-width: 767px) {
+	#contactImageWrapper {
+		margin-top: 2rem;
+	}
+}
+
+/**
+ * Footer
+ */
+footer {
+	text-align: center;
+
+	img {
+		width: 5rem;
+	    padding: .6rem;
+	}
+}
